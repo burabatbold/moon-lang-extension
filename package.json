@@ -1,0 +1,55 @@
+{
+  "name": "moon-mongolia-lang",
+  "displayName": "Moon Mongolia Script Language",
+  "description": "Support for Moon programming language",
+  "version": "0.0.3",
+  "publisher": "BatboldZorigoo",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/burabatbold/moon-lang-extension"
+  },
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.96.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Themes"
+  ],
+  "activationEvents": [
+    "onLanguage:mn"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "mn",
+        "aliases": [
+          "Moon Language",
+          "mn"
+        ],
+        "extensions": [
+          ".mn"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "mn",
+        "scopeName": "source.mn",
+        "path": "./syntaxes/mn.tmLanguage.json"
+      }
+    ],
+    "themes": [
+      {
+        "label": "Moon Dark Theme",
+        "uiTheme": "vs-dark",
+        "path": "./themes/moon-dark-theme.json"
+      }
+    ]
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.96.0"
+  }
+}

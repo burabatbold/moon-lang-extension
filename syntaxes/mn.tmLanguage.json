@@ -1,0 +1,69 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "moon-lang",
+  "patterns": [
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#numbers"
+    },
+    {
+      "include": "#operators"
+    },
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#function-declaration"
+    },
+    {
+      "include": "#type-declaration"
+    }
+  ],
+  "repository": {
+    "keywords": {
+      "patterns": [
+        {
+          "name": "keyword.control.mn",
+          "match": "\\b(хэрэв|бол|буц|давтах|зарла|функц|extern|үндсэн)\\b"
+        }
+      ]
+    },
+    "strings": {
+      "name": "string.quoted.double.mn",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.mn",
+          "match": "\\\\."
+        }
+      ]
+    },
+    "numbers": {
+      "name": "constant.numeric.mn",
+      "match": "\\b\\d+\\b"
+    },
+    "operators": {
+      "name": "keyword.operator.mn",
+      "match": "\\b(\\+|\\-|\\*|/|==|<=|>=|<|>|\\=)\\b"
+    },
+    "comments": {
+      "name": "comment.line.double-slash.mn",
+      "match": "//.*$"
+    },
+    "function-declaration": {
+      "name": "entity.name.function.mn",
+      "match": "\\b(функц)\\s+([а-яА-Я\\w]+)\\b"
+    },
+    "type-declaration": {
+      "name": "storage.type.mn",
+      "match": "\\b(тоо64|тоо|хоосон|мөр)\\b"
+    }
+  },
+  "scopeName": "source.mn"
+}
